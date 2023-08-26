@@ -27,9 +27,6 @@ pipeline {
         }
         
         stage('Kaniko Image Build & Push Image') {
-            when {
-                branch 'main'
-            }
             steps {
                 container('kaniko') {
                     script {
@@ -45,9 +42,6 @@ pipeline {
         }
 
         stage('Checkout K8S manifest SCM'){
-            when {
-                branch 'main'
-            }
             steps {
                 git credentialsId: 'gh_mahesh_key', 
                 url: 'hhttps://github.com/mahesh2121/argocd_app_k8s_manifests.git',
@@ -56,9 +50,6 @@ pipeline {
         }
         
         stage('Staging Deploy - Update K8S manifest & push to Repo'){
-            when {
-                branch 'main'
-            }
             steps {
                 milestone(1)
                 script{
