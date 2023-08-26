@@ -44,7 +44,7 @@ pipeline {
         stage('Checkout K8S manifest SCM'){
             steps {
                 git credentialsId: 'gh_mahesh_key', 
-                url: 'hhttps://github.com/mahesh2121/argocd_app_k8s_manifests.git',
+                url: 'https://github.com/mahesh2121/argocd_app_k8s_manifests.git',
                 branch: 'main'
             }
         }
