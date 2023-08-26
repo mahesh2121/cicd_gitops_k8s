@@ -1,0 +1,12 @@
+nodePort: 30081
+###
+persistence:
+  enabled: true
+  existingClaim: jenkins-pv-claim
+###
+storageClass: local-storage
+###
+serviceAccount:
+  create: false
+  name: jenkins
+  annotations: {}
