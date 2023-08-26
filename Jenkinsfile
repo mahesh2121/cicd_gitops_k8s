@@ -79,7 +79,7 @@ pipeline {
                 input 'Deploy to Production ?'
                 milestone(2)
                 script{
-                    withCredentials([usernamePassword(credentialsId: 'gh_shobhan_key', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: 'gh_mahesh_key', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         sh '''
                         cd prod
                         cat deployment.yaml
