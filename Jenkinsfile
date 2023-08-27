@@ -64,7 +64,6 @@ pipeline {
                         git add deployment.yaml
                         git commit -m 'Updated the Staging App deployment | Jenkins Pipeline'
                         git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/argocd_app_k8s_manifests.git HEAD:main
-                        echo "Image is -------------------------------pushed"
                         '''                        
                     }
                 }
