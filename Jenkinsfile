@@ -53,7 +53,7 @@ pipeline {
             steps {
                 milestone(1)
                 script{
-                    withCredentials([usernamePassword(credentialsId: 'gh_shobhan_key', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: 'gh_mahesh_key', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         sh '''
                         cd staging
                         cat deployment.yaml
